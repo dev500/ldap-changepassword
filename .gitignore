@@ -64,7 +64,3 @@ phpunit.phar
 
 # JIRA plugin
 atlassian-ide-plugin.xml
-
-# composer vendor dir
-src/vendor
-src/config
