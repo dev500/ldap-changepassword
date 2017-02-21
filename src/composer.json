@@ -1,0 +1,12 @@
+{
+    "name": "dev500/ldap-changepassword",
+    "description": "LDAP change password",
+    "keywords": ["dev500", "ldap"],
+    "homepage": "https://github.com/dev500/ldap-changepassword",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {
+        "slim/slim": "^3.7",
+        "slim/php-view": "^2.2"
+    }
+}
