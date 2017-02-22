@@ -1,8 +1,10 @@
-FROM php:7.1-cli
-RUN apt-get update \
-    && apt-get install libldap2-dev -y \
-    && rm -rf /var/lib/apt/lists/* \
-    && docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ \
+FROM php:7.1-alpine
+MAINTAINER Kanin Peanviriyakulkit <kanin.pean@gmail.com>
+RUN apk update \
+    && apk add --no-cache \
+        openldap-dev \
+        libldap \
+    && docker-php-ext-configure ldap --with-libdir=lib/ \
     && docker-php-ext-install ldap
 WORKDIR /usr/src
 EXPOSE 80
